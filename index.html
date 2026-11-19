@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scent Cousin</title>
+  <meta name="description" content="Scent Cousin helps you find fragrances close to the ones you love, and offers a little help when you are picking a gift. Coming soon.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://scentcousin.com/">
+  <link rel="icon" href="logo-favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="Scent Cousin">
+  <meta property="og:description" content="Scent Cousin helps you find fragrances close to the ones you love, and offers a little help when you are picking a gift. Coming soon.">
+  <meta property="og:image" content="https://scentcousin.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scent Cousin. Coming soon.">
+  <meta property="og:url" content="https://scentcousin.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Scent Cousin">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scent Cousin">
+  <meta name="twitter:description" content="Scent Cousin helps you find fragrances close to the ones you love, and offers a little help when you are picking a gift. Coming soon.">
+  <meta name="twitter:image" content="https://scentcousin.com/og.png">
+  <meta name="theme-color" content="#F1E6C8">
+  <style>
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/fraunces-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --paper: #F1E6C8;
+  --ink: #221A17;
+  --oxblood: #7A2418;
+  --brass: #9C7A2A;
+  --brass-line: rgba(156, 122, 42, 0.62);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Fraunces, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.15rem;
+  background: radial-gradient(ellipse at 50% 42%, rgba(255, 248, 230, 0.28), transparent 70%);
+}
+
+.card {
+  width: min(42rem, 100%);
+  min-height: min(26.5rem, calc(100dvh - 2.3rem));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3.25rem 1.4rem 3rem;
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border: 1px solid var(--brass-line);
+}
+.card::after {
+  inset: 0.5rem;
+}
+
+.lockup {
+  width: min(28.5rem, 90%);
+  height: auto;
+  display: block;
+}
+
+.kicker {
+  margin: 1.85rem 0 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.08rem, 2.6vw, 1.28rem);
+  color: var(--oxblood);
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  font-variation-settings: "SOFT" 50, "WONK" 0.8, "opsz" 20;
+}
+
+.gem {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--brass);
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
+
+.lede {
+  margin: 1.15rem 0 0;
+  max-width: 28.5em;
+  font-size: clamp(1.02rem, 2.35vw, 1.22rem);
+  line-height: 1.58;
+  font-weight: 400;
+  font-variation-settings: "SOFT" 28, "WONK" 0.3, "opsz" 18;
+}
+
+.home {
+  margin-top: 1.65rem;
+  color: var(--oxblood);
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 0.12em;
+  font-size: 1.05rem;
+}
+.home:hover,
+.home:focus-visible {
+  color: var(--ink);
+}
+
+@media (min-width: 720px) {
+  .page { padding: 2rem; }
+  .card {
+    padding: 4.75rem 3.75rem 4.4rem;
+    min-height: min(32rem, calc(100dvh - 4rem));
+  }
+  .card::after { inset: 0.7rem; }
+  .lockup { width: min(32.5rem, 86%); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <img class="lockup" src="logo-lockup.svg" width="1180" height="310" alt="Scent Cousin">
+      <p class="kicker"><span class="gem" aria-hidden="true"></span>Coming soon<span class="gem" aria-hidden="true"></span></p>
+      <p class="lede">Find fragrances close to the ones you already love.<br>Get a little help picking a gift.</p>
+      
+    </main>
+  </div>
+</body>
+</html>
