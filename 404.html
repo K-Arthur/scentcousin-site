@@ -12,21 +12,6 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#F1E6C8">
   <style>
-@font-face {
-  font-family: "Fraunces";
-  src: url("fonts/fraunces.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Fraunces";
-  src: url("fonts/fraunces-italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
 :root {
   --paper: #F1E6C8;
   --ink: #221A17;
@@ -44,7 +29,7 @@ html, body {
 }
 
 body {
-  font-family: Fraunces, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-family: "Palatino Linotype", Palatino, "Times New Roman", serif;
   background-color: var(--paper);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -116,7 +101,6 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 0.9rem;
-  font-variation-settings: "SOFT" 50, "WONK" 0.8, "opsz" 20;
 }
 
 .gem {
@@ -133,7 +117,6 @@ body::before {
   font-size: clamp(1.02rem, 2.35vw, 1.22rem);
   line-height: 1.58;
   font-weight: 400;
-  font-variation-settings: "SOFT" 28, "WONK" 0.3, "opsz" 18;
 }
 
 .home {
@@ -166,7 +149,10 @@ body::before {
 <body>
   <div class="page">
     <main class="card">
-      <img class="lockup" src="logo-lockup.svg" width="1180" height="310" alt="Scent Cousin">
+      <picture>
+        <source media="(max-width: 719px)" srcset="lockup-stacked-color.svg" width="685" height="483">
+        <img class="lockup" src="lockup-horizontal-color.svg" width="1044" height="298" alt="Scent Cousin">
+      </picture>
       <p class="kicker"><span class="gem" aria-hidden="true"></span>Page not found<span class="gem" aria-hidden="true"></span></p>
       <p class="lede">This page could not be found. The site is still being built, and some paths may not be ready yet.</p>
       <a class="home" href="/">Back to Scent Cousin</a>
